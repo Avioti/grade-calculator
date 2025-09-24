@@ -41,10 +41,11 @@ public class GradeCalculator {
         int Homework_average = (Homework_one + Homework_two + Homework_three + Homework_four) / 4;
         double Final_grade = (Test_average * 0.4) + (Quiz_average * 0.3) + (Homework_average * 0.3);
 
+
         System.out.println("Test Average: " + Test_average);
         System.out.println("Quiz Average: " + Quiz_average);
         System.out.println("Homework Average: " + Homework_average);
-        System.out.printf("Final Grade: %.2f%n" ,Final_grade);
+        System.out.printf("Weighted Final Grade: %.2f%n" ,Final_grade);
         if (Test_average >= 90){
             System.out.println("Your Overall Test grade is A");
         }
@@ -101,6 +102,22 @@ public class GradeCalculator {
             System.out.println("Your Overall Homework grade is F");
         }
 
+
+        if (Final_grade >= 90){
+            System.out.println("Your Final grade is A");
+        }
+        else if (Final_grade >= 80) {
+            System.out.println("Your Final grade is B");
+        }
+        else if (Final_grade >= 70) {
+            System.out.println("Your Final grade is C");
+        }
+        else if (Final_grade >= 60) {
+            System.out.println("Your Final grade is D");
+        }
+        else {
+            System.out.println("Your Final grade is F");
+        }
 
     }
 }
